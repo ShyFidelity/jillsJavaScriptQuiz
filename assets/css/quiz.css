@@ -20,67 +20,13 @@ body {
   }
 
 
-
-.buttons {
-    font-size: 16px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-     
-
-} 
-
-.buttons:hover {
-    cursor: pointer;
+.timer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    background-color: hotpink;
 
 }
 
-#playgame {
-    padding: 4%;
-    margin: 20px;
-    border:gold 5px solid;
-    background-color: rgb(170, 238, 200);
-    border-radius: 10px
 
-}
-#no, #yes {
-    text-decoration: none;
-    font-size: 30px;
-    padding: 1%;
-    margin: 20px;
-    border:gold 5px solid;
-    background-color: rgb(170, 238, 200);
-    border-radius: 10px
 
-}
 
-#highscore {
-    text-decoration: none;
-    font-size: 30px;
-    padding: 1%;
-    margin: 20px;
-    border:gold 5px solid;
-    background-color: rgb(170, 238, 200);
-    border-radius: 10px
-
-}
-
-a {
-    text-decoration: none;
-    font-style: none;
-    border: none;
-    
-        }
-h1 {
-    font-size: 100px;
-    font-family: serif;
-}
-ul {
-
-    list-style: none;
-    font-size: large;
-}
-
-a {
-    font-style: none;
-}
