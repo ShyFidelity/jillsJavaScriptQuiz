@@ -2,76 +2,82 @@
 //Selects elements by class
 var startBtn = document.querySelector('#start-button')
 const timeLeft = document.querySelector('#seconds-left')
-var questionSelector = document.querySelector('#question')
+var questionContent = document.querySelector('#question')
 let timeStart = 60;
 
-let question1 = 
-    {question: "What does HTML stand for?",
+let randomQuestion = []
+let questionsAll = [
+    {question: "How do you nest objects inside Arrays?",
     answer1:"a",
     answer2:"b",
     answer3:"c",
     answer4:"d",
     answer: 1
-    }
+    },
 
-let question2 = {
-    question: "What does HTML stand for?",
+    {
+    question: "Will I need if else statements to get the click to work",
     answer1:"a",
     answer2:"b",
     answer3:"c",
     answer4:"d",
     answer: 2
-    }
+    },
 
-let question3 = {
-    question: "What does HTML stand for?",
+    {
+    question: "q3",
     answer1:"a",
     answer2:"b",
     answer3:"c",
     answer4:"d",
     answer: 2
-        }
+        },
 
-let question4 = { 
-    question: "What does HTML stand for?",
+    { 
+    question: "q4",
     answer1:"a",
     answer2:"b",
     answer3:"c",
     answer4:"d",
     answer: 4
             
-    }
+    } ]
 
-    let questionsAll = [question1, question2, question3, question4]
+// let questionsAll = [question1, question2, question3, question4]
 
 
 
-// getting questions and options from array
-    function countDown() {
-        var timeInterval = setInterval(function () {
+//timer begins when clicked 
+function countDown() {
+    var timeInterval = setInterval(function () {
             timeStart--;
             timeLeft.textContent = timeStart; 
-            if (timeStart === 0){
+            if (timeStart < 0){
             clearInterval(timeInterval);
             }
     }, 1000);
     }
 
+// make this a for loop that goes through an array of objects  
+//increase idex of question after click 
+function getNewQuestion() {
+   var newIndex = Math.floor(Math.random()*questionsAll.length)
+   //remove new question from the array 
+   return questionsAll[newIndex[1]]
+
+}
 function startGame() {
-    //or make this a for loop that goes through an array of objects 
-    //document.getElementById('#question').textContent = 'this is question 1';
-
-    for (let i = 0; i < questionsAll.length; i++) {
-        var questionAllEl = questionsAll[i];
-
-    questionSelector.textContent = (questionAllEl)   
+    getNewQuestion()
+    questionContent.textContent = questionAllEl.question 
     }  
-      }
+      
+
     
 
 startBtn.addEventListener('click',() => {    
+    countDown();   
     startGame();
-    countDown();    
+     
 });
 
 
