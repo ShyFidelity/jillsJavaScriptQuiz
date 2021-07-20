@@ -52,31 +52,40 @@ function countDown() {
     var timeInterval = setInterval(function () {
             timeStart--;
             timeLeft.textContent = timeStart; 
-            if (timeStart < 0){
+            if (timeStart <= 0){
             clearInterval(timeInterval);
             }
     }, 1000);
     }
 
-// make this a for loop that goes through an array of objects  
-//increase idex of question after click 
-function getNewQuestion() {
-   var newIndex = Math.floor(Math.random()*questionsAll.length)
-   //remove new question from the array 
-   return questionsAll[newIndex[1]]
 
+//increase idex of question after click 
+//get new question get the answers 
+
+
+function getNewQuestion() {
+   const newIndex = questionsAll[Math.floor(Math.random()*questionsAll.length)];
+   //remove new question from the array 
+   return newIndex
 }
+
+
 function startGame() {
-    getNewQuestion()
-    questionContent.textContent = questionAllEl.question 
+    const newIndex = questionsAll[Math.floor(Math.random()*questionsAll.length)];
+    //remove new question from the array 
+    questionContent.textContent = newIndex
+    //remove new question from the array 
+   
     }  
+
+
       
 
     
 
 startBtn.addEventListener('click',() => {    
     countDown();   
-    startGame();
+    getNewQuestion();
      
 });
 
