@@ -9,36 +9,33 @@ let choiceContent3 = document.querySelector(".choice3")
 let choiceContent4 = document.querySelector(".choice4")
 let timeStart = 60;
 
+//global var allows ++
 var index = 0
 let randomQuestion = []
 let questionsAll = [
     {question: "How do you store objects inside arrays?",
     choice: ["by surrounding them with ()","by using {} and ,","surround every word in []","you cannot store objects in arrays"],
-    correctAnswer:["by using {} and ,"]
+    correctAnswer: "by using {} and ,"
     },
 
     {
     question: "Will I need if else statements to get the click to work",
     choice: ["a","b","c","d"],
     correctAnswer: ["b"]
-    }]
+    },
 
-    // {
-    // question: "q3",
-    // answer1:"a",
-    // answer2:"b",
-    // answer3:"c",
-    // answer4:"d",
-    //     },
+    {
+    question: "How do you store objects inside arrays?",
+    choice: ["by surrounding them with ()","by using {} and ,","surround every word in []","you cannot store objects in arrays"],
+    correctAnswer: "by using {} and ,"
+    },
 
-    // { 
-    // question: "q4",
-    // answer1:"a",
-    // answer2:"b",
-    // answer3:"c",
-    // answer4:"d",
-            
-    // } ]
+    {
+    question: "How do you store objects inside arrays?",
+    choice: ["by surrounding them with ()","by using {} and ,","surround every word in []","you cannot store objects in arrays"],
+    correctAnswer: "by using {} and ,"} ]
+   
+
 
 console.log(questionsAll.answer1)
 console.log(questionsAll[0].question)
@@ -105,10 +102,66 @@ startBtn.addEventListener('click',function() {
 });
 
 choiceContent1.addEventListener('click', function(){
+    if (questionsAll[index].correctAnswer === choiceContent1.value)
+    index++;
+    else if (questionsAll[index].correctAnswer !== choiceContent1.value){
+    timeStart = timeStart - 10;
+    index++;
+    } 
+    //if not true this will not render 
+    if (questionsAll.length <= index)
+    return 
+
+    getRandomQuestion() 
+    //go to hs page? 
+//doesn't exist nowhere    
+})
+choiceContent2.addEventListener('click', function(){
+    if (questionsAll[index].correctAnswer === choiceContent1.value)
+    index++;
+    else if (questionsAll[index].correctAnswer !== choiceContent1.value){
+    timeStart = timeStart - 10;
+    index++;
+    } 
+
+    getRandomQuestion()   
+//doesn't exist nowhere    
+})
+
+choiceContent3.addEventListener('click', function(){
+    if (questionsAll[index].correctAnswer === choiceContent1.value)
+    index++;
+    else if (questionsAll[index].correctAnswer !== choiceContent1.value){
+    timeStart = timeStart - 10;
+    index++;
+    } 
+
+    getRandomQuestion()   
+//doesn't exist nowhere    
+})
+
+choiceContent4.addEventListener('click', function(){
+    if (questionsAll[index].correctAnswer === choiceContent1.value)
+    index++;
+    else if (questionsAll[index].correctAnswer !== choiceContent1.value){
+    timeStart = timeStart - 10;
+    index++;
+    } 
+
+    getRandomQuestion() 
     
+    
+//doesn't exist nowhere    
 })
 
 
+//set item 
+//get item 
+
+
+
+//stop index after 4 
+//store highscores here in highscore page we will retrieve 
 
     // let text = document.getElementById('.question').textContent;
 // function StartGame() {
