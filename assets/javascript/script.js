@@ -19,21 +19,21 @@ let questionsAll = [
     },
 
     {
-    question: "Will I need if else statements to get the click to work",
-    choice: ["a","b","c","d"],
-    correctAnswer: ["b"]
+    question: "What does the .splice() method do?",
+    choice: ["cuts arrays in half","cuts objects of an array in half","doubles all objects in an array","changes the contents of an array by removing or replacing existing elements"],
+    correctAnswer: "changes the contents of an array by removing or replacing existing elements"
     },
 
     {
-    question: "How do you store objects inside arrays?",
-    choice: ["by surrounding them with ()","by using {} and ,","surround every word in []","you cannot store objects in arrays"],
-    correctAnswer: "by using {} and ,"
+    question: "How can you find how many items are in an Array",
+    choice: ["by surrounding them with ()","count them","use array.length","use array.count"],
+    correctAnswer: "use array.count"
     },
 
     {
-    question: "How do you store objects inside arrays?",
-    choice: ["by surrounding them with ()","by using {} and ,","surround every word in []","you cannot store objects in arrays"],
-    correctAnswer: "by using {} and ,"} ]
+    question: "Which of the following is true?",
+    choice: ["booleans are true/false data types","a string is data type with text in quotes","objects can contain multiple properties","all of the above"],
+    correctAnswer: "all of the above"} ]
    
 
 
@@ -123,9 +123,11 @@ choiceContent2.addEventListener('click', function(){
     timeStart = timeStart - 10;
     index++;
     } 
+    //if not true this will not render 
+    if (questionsAll.length <= index)
+    return 
 
-    getRandomQuestion()   
-//doesn't exist nowhere    
+    getRandomQuestion()      
 })
 
 choiceContent3.addEventListener('click', function(){
@@ -135,9 +137,11 @@ choiceContent3.addEventListener('click', function(){
     timeStart = timeStart - 10;
     index++;
     } 
-
+ //if not true this will not render 
+    if (questionsAll.length <= index)
+    return 
     getRandomQuestion()   
-//doesn't exist nowhere    
+    
 })
 
 choiceContent4.addEventListener('click', function(){
@@ -147,104 +151,10 @@ choiceContent4.addEventListener('click', function(){
     timeStart = timeStart - 10;
     index++;
     } 
-
+     //if not true this will not render 
+    if (questionsAll.length <= index)
+    return 
     getRandomQuestion() 
-    
-    
-//doesn't exist nowhere    
+        
 })
 
-
-//set item 
-//get item 
-
-
-
-//stop index after 4 
-//store highscores here in highscore page we will retrieve 
-
-    // let text = document.getElementById('.question').textContent;
-// function StartGame() {
-
-// const questions = [
-//     {
-//         question: 'whats your name'
-//         answer: [
-//             {Text: 'kate' correct: false}, 
-//             { text: 'jill' correct: true}
-//         ]
-//     }
-// ]
-
-// }
-
-
-
-// //make a function that when you click a choice you loose -15 seconds
-// var answersEl = document.querySelector(".answer")
-
-// answersEl.addEventListener("click", function(event){
-//     var element = event.target;
-
-//     if (element.matches())
-// })
-
-
-
-
-
-
-
-
-
-
-// let questionEl = []
-// let correctAnswers = true 
-// let score = 0
-// let questionCounter = 0 
-// let availableQuestions = []
-
-
-
-
-
-
-
-//create a quiz with buttons 
-//
-//variables 
-    //you will need ids and query selectors 
-
-//functions 
-    //create a timer that looses time when an answer is wrong
-    //deduct 10 seconds if you get an answer wrong 
-
-    //event listeners
-
-    // need questions need to find the correct answer 
-    //store all the questions and answers in an array 
-    // WILL NEED AN ARRAY OF OBJECTS 
-    //available array 
-    //each of your questions would be an object 
-    //object would have 3 properties 
-    //strign thats the question 
-    ///array of answer list
-    //array of the correct answer 
-
-    //function just has one task update display all based of of the click 
-    
-
-    //how to automatically refresh you 
-    // you would want to use inner html and take tags create a string that's a div
-    //that has a paragraph that the questions and a list with the answers send 
-    //textContent to replace the html 
-
-
-
-    //need data attribute for display 
-
-
-
-//will need event listeners 
-
-//if else statements && for correct answer */
