@@ -3,10 +3,10 @@
 const startBtn = document.querySelector('#start-button')
 const timeLeft = document.querySelector('#seconds-left')
 var questionContent = document.querySelector('#question')
-let choiceContent1 = document.querySelector(".choice1")
-let choiceContent2 = document.querySelector(".choice2")
-let choiceContent3 = document.querySelector(".choice3")
-let choiceContent4 = document.querySelector(".choice4")
+let choiceContent1 = document.querySelector("#choice1")
+let choiceContent2 = document.querySelector("#choice2")
+let choiceContent3 = document.querySelector("#choice3")
+let choiceContent4 = document.querySelector("#choice4")
 let timeStart = 60;
 
 //global var allows ++
