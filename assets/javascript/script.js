@@ -1,52 +1,47 @@
 //elements to get from the document 
 //Selects elements by class
-var startBtn = document.querySelector('#start-button')
+const startBtn = document.querySelector('#start-button')
 const timeLeft = document.querySelector('#seconds-left')
 var questionContent = document.querySelector('#question')
+let choiceContent1 = document.querySelector(".choice1")
+let choiceContent2 = document.querySelector(".choice2")
+let choiceContent3 = document.querySelector(".choice3")
+let choiceContent4 = document.querySelector(".choice4")
 let timeStart = 60;
 
+var index = 0
 let randomQuestion = []
 let questionsAll = [
-    {question: "How do you nest objects inside Arrays?",
-    answer1:"a",
-    answer2:"b",
-    answer3:"c",
-    answer4:"d",
-    answer: 1
+    {question: "How do you store objects inside arrays?",
+    choice: ["by surrounding them with ()","by using {} and ,","surround every word in []","you cannot store objects in arrays"],
+    correctAnswer:["by using {} and ,"]
     },
 
     {
     question: "Will I need if else statements to get the click to work",
-    answer1:"a",
-    answer2:"b",
-    answer3:"c",
-    answer4:"d",
-    answer: 2
-    },
+    choice: ["a","b","c","d"],
+    correctAnswer: ["b"]
+    }]
 
-    {
-    question: "q3",
-    answer1:"a",
-    answer2:"b",
-    answer3:"c",
-    answer4:"d",
-    answer: 2
-        },
+    // {
+    // question: "q3",
+    // answer1:"a",
+    // answer2:"b",
+    // answer3:"c",
+    // answer4:"d",
+    //     },
 
-    { 
-    question: "q4",
-    answer1:"a",
-    answer2:"b",
-    answer3:"c",
-    answer4:"d",
-    answer: 4
+    // { 
+    // question: "q4",
+    // answer1:"a",
+    // answer2:"b",
+    // answer3:"c",
+    // answer4:"d",
             
-    } ]
+    // } ]
 
-// let questionsAll = [question1, question2, question3, question4]
-
-
-
+console.log(questionsAll.answer1)
+console.log(questionsAll[0].question)
 //timer begins when clicked 
 function countDown() {
     var timeInterval = setInterval(function () {
@@ -63,18 +58,38 @@ function countDown() {
 //get new question get the answers 
 
 
-function getNewQuestion() {
-   const newIndex = questionsAll[Math.floor(Math.random()*questionsAll.length)];
-   //remove new question from the array 
-   return newIndex
-}
+function getRandomQuestion() {
+    //remove new question from the array 
+   var newIndex = questionsAll[index];
+   //var displayQuestion= questionsAll.splice(newIndex, 1);
+   questionContent.innerText = newIndex.question;
+   choiceContent1.innerText = newIndex.choice[0];
+   choiceContent2.innerText = newIndex.choice[1];
+   choiceContent3.innerText = newIndex.choice[2];
+   choiceContent4.innerText = newIndex.choice[3];
+//overides the value of the html so we can get an answer(true)
+//button has text but no value 
+//.value gives button a valuehtml has no value 
+   choiceContent1.value = newIndex.choice[0];
+   choiceContent2.value = newIndex.choice[1];
+   choiceContent3.value = newIndex.choice[2];
+   choiceContent4.value = newIndex.choice[3];
 
+   console.log(newIndex)
+   console.log(choiceContent1.value)
+
+
+}
+//everything is an object need to find an index then you can go into the object of that index
 
 function startGame() {
-    const newIndex = questionsAll[Math.floor(Math.random()*questionsAll.length)];
-    //remove new question from the array 
-    questionContent.textContent = newIndex
-    //remove new question from the array 
+
+    //once I get the question to display the choices will have to be able to be clicked on
+    //i will need to separate these from the question 
+    //i will create an if else statement if the the answer choice is true
+    if (questionsAll > 0) {
+    
+    }
    
     }  
 
@@ -83,13 +98,15 @@ function startGame() {
 
     
 
-startBtn.addEventListener('click',() => {    
+startBtn.addEventListener('click',function() {    
     countDown();   
-    getNewQuestion();
+    getRandomQuestion();
      
 });
 
-
+choiceContent1.addEventListener('click', function(){
+    
+})
 
 
 
@@ -158,7 +175,7 @@ startBtn.addEventListener('click',() => {
     //each of your questions would be an object 
     //object would have 3 properties 
     //strign thats the question 
-    ///aray of answer list
+    ///array of answer list
     //array of the correct answer 
 
     //function just has one task update display all based of of the click 
