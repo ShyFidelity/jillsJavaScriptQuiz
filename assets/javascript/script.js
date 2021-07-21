@@ -35,10 +35,6 @@ let questionsAll = [
     choice: ["booleans are true/false data types","a string is data type with text in quotes","objects can contain multiple properties","all of the above"],
     correctAnswer: "all of the above"} ]
    
-
-
-console.log(questionsAll.answer1)
-console.log(questionsAll[0].question)
 //timer begins when clicked 
 function countDown() {
     var timeInterval = setInterval(function () {
@@ -46,10 +42,13 @@ function countDown() {
             timeLeft.textContent = timeStart; 
             if (timeStart <= 0){
             clearInterval(timeInterval);
-            }
+            } 
     }, 1000);
     }
 
+// function stopWatch {
+//         clearTimeout(countDown(stopWatch));
+//         if (timeStart <= 0)}
 
 //increase idex of question after click 
 //get new question get the answers 
@@ -77,22 +76,6 @@ function getRandomQuestion() {
 
 
 }
-//everything is an object need to find an index then you can go into the object of that index
-
-function startGame() {
-
-    //once I get the question to display the choices will have to be able to be clicked on
-    //i will need to separate these from the question 
-    //i will create an if else statement if the the answer choice is true
-    if (questionsAll > 0) {
-    
-    }
-   
-    }  
-
-
-      
-
     
 
 startBtn.addEventListener('click',function() {    
