@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 body {
     background-color:papayawhip;
     background-image:url("../images/camelCase.png");
@@ -8,7 +8,6 @@ body {
     margin: 3%; 
     
 }
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
 a {
     text-decoration: none;
@@ -48,6 +47,9 @@ h1 {
 }
 
 
+.quiz-button{
+    display: block;
+}
 #start-button, .quiz-button {
     text-decoration: none;
     font-family: 'Orbitron', sans-serif;

@@ -24,10 +24,8 @@ a {
 .container {
     background-color: palevioletred;
     margin: auto;
-    width: 60%;
     width: 90vh;
     border-radius: 8px;
-    box-shadow: pink(60, 64, 67, 2); 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,14 +43,18 @@ h1 {
 }
 
 h2 {
-    font-family: 'Orbitron', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    background-color: lightpink;
+    padding: 10px;
+    border: 10px double wheat;
+    border-radius: 20px;
+    font-size: 36px;
     font-family: 'Roboto Mono', monospace;
 }
-
-#highscores, #homeBtn {
+.input-name {
     text-align: center;
-    font-family: 'Orbitron', sans-serif;
+}
+
+ #homeBtn, #nameHS, #highscores {
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Mono', monospace;
     font-size: 36px;
