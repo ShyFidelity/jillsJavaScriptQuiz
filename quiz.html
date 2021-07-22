@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/quiz.css"/>
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/quiz.css" />
+  </head>
 
-<body>
-
-<div class="container">
-    <div id="time-score">
-            <h1>JavaScript Quiz</h1>
-            <div class="timer">
-              <h2><span id="seconds-left"></span></h2> 
-            </div>
-               <button id="start-button">Start Countdown!</button>
-            <h2><span id="Score"></span></h2>
-        </div>    
-    <div id="questionchoices" class="questionchoices">
+  <body>
+    <div class="container">
+      <div id="time-score">
+        <h1>JavaScript Quiz</h1>
+        <div class="timer">
+          <h2><span id="seconds-left"></span></h2>
+        </div>
+        <button id="start-button">Start Countdown!</button>
+        <h2><span id="Score"></span></h2>
+      </div>
+      <div id="questionchoices" class="questionchoices">
         <div id="question"></div>
         <div id="choice"></div>
-        <button class=quiz-button id="choice1"></button>
-        <button class=quiz-button id="choice2"></button>
-        <button class=quiz-button id="choice3"></button>
-        <button class=quiz-button id="choice4"></button>
+        <button class="quiz-button" id="choice1"></button>
+        <button class="quiz-button" id="choice2"></button>
+        <button class="quiz-button" id="choice3"></button>
+        <button class="quiz-button" id="choice4"></button>
         <div id="answer1"></div>
         <div id="answer2"></div>
         <div id="answer3"></div>
         <div id="answer4"></div>
+      </div>
+      <button id="homeBtn"><a href="index.html">Home</a></button>
+    </div>
 
-    </div> 
-    <button id ="homeBtn"><a href="index.html">Home</a></button>
-</div>
-    
-
- 
     <script src="./assets/javascript/script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,23 +1,35 @@
 
-var finalTime = localStorage.setItem("finalTime", finalTime);
+const nameInput = document.querySelector("#namePh");
+const displayNameSpan = document.querySelector("#userName")
 
-finalTime.textContent = finalTime;
+//stored in global so it can be called again 
+showName()
 
-const nameInput = document.querySelector("#nameHS");
-const displayNameInput = document.querySelector("#nameHsInput")
 function showName() {
-    var name = localStorage.getItem("nameHS");
+    var nameStored = localStorage.getItem("namePh");
 
-    if (!name) {
+    if (!nameStored) {
         return;
-    }
-    displayNameInput.textContent = name;
+      }
+      
+    displayNameSpan.textContent = nameStored;  
 
 }
-var nameHsInput = document.querySelector('#nameHsInput')
-nameHsInput.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-     
-    displayNameInput.textContent = nameHsInput;
+    
+
+nameHsInput.addEventListener('keypress', function(event) {
+    event.preventDefault();
+    var nameHsInput = document.querySelector('#userName').value;
+    if (event.key === 'Enter') {
+
+    localStorage.setItem("userName",nameHsInput);
+
+    showName()
     }
 });
+
+
+//couldn't quite get this page to work..
+//I referenced several videos and the activities from last week but had no luck 
+//var finalTime = localStorage.setItem("finalTime", finalTime);
+// finalTime.textContent = finalTime;
