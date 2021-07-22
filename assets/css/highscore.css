@@ -4,7 +4,7 @@
 body {
     background-color:papayawhip;
     background-image:url("../images/camelCase.png");
-    background-repeat: no-repeat; 
+    background-repeat: repeat; 
     background-attachment: fixed;
     background-position: center bottom;
     margin: 3%; 

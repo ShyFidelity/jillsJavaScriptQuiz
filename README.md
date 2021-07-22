@@ -16,10 +16,11 @@ This project was a test of everything we have learned so far. I had to do lots o
 
 
 ## Here is a preview of my work:
-![screenshot of my image](./assets/images/ScreenShotweek2.png)
-
+![screenshot of my image](./assets/images/jsQuizSs1.png)
+![screenshot of my image](./assets/images/jsQuizSs2.png)
+![screenshot of my image](./assets/images/jsQuizSs3.png)
 ## Here is a link to my work:
-[See it here](https://jilliankayworks.github.io/my-portfolio/)
+[See it here](https://jilliankayworks.github.io/jillsJavaScriptQuiz/)
 
 
 ## Table of Contents 

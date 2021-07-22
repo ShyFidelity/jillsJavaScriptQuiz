@@ -18,8 +18,8 @@ let questionsAll = [
     choice: [
       "by surrounding them with ()",
       "by using {} and ,",
-      "surround every word in []",
       "you cannot store objects in arrays",
+      "surround every word in []",
     ],
     correctAnswer: "by using {} and ,",
   },
@@ -154,7 +154,6 @@ choiceContent4.addEventListener("click", function () {
     clearInterval(timeInterval);
   } else if (questionsAll[index].correctAnswer !== choiceContent4.value) {
     timeStart = timeStart - 10;
-    clearInterval(timeInterval);
   }
   //if not true this will not render;
   if (index < questionsAll.length) {
