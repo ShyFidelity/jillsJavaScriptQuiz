@@ -97,8 +97,7 @@ function getRandomQuestion() {
   choiceContent3.value = newIndex.choice[2];
   choiceContent4.value = newIndex.choice[3];
 
-  console.log(newIndex);
-  console.log(choiceContent1.value);
+
 }
 
 startBtn.addEventListener("click", function () {
@@ -152,16 +151,16 @@ choiceContent3.addEventListener("click", function () {
 
 choiceContent4.addEventListener("click", function () {
   if (questionsAll[index].correctAnswer === choiceContent4.value) {
-    index++;
+    clearInterval(timeInterval);
   } else if (questionsAll[index].correctAnswer !== choiceContent4.value) {
     timeStart = timeStart - 10;
-    index++;
+    clearInterval(timeInterval);
   }
   //if not true this will not render;
   if (index < questionsAll.length) {
     return getRandomQuestion();
-  } else {
+  } else if (index < questionsAll.length){
     clearInterval(timeInterval);
-  }
+  } 
   //want to go to the high score page and store countDown var 
 });

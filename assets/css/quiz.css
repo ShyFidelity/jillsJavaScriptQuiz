@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&family=Roboto+Mono:wght@300&display=swap');import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 body {
     background-color:papayawhip;
     background-image:url("../images/camelCase.png");
@@ -13,7 +15,6 @@ a {
     text-decoration: none;
     color:black;
     text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Mono', monospace;
         }
