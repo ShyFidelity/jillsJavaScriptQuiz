@@ -160,6 +160,10 @@ choiceContent4.addEventListener("click", function () {
     return getRandomQuestion();
   } else if (index < questionsAll.length){
     clearInterval(timeInterval);
+    localStorage.setItem("finalTime", timeStart);
+    //key final time equal 
   } 
+  
+  //
   //want to go to the high score page and store countDown var 
 });
