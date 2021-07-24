@@ -119,6 +119,7 @@ choiceContent1.addEventListener("click", function () {
   } else {
     clearInterval(timeInterval);
     localStorage.setItem("finalTime", timeStart);
+    window.location.replace("highscore.html");
   }
 });
 choiceContent2.addEventListener("click", function () {
@@ -134,6 +135,7 @@ choiceContent2.addEventListener("click", function () {
   } else {
     clearInterval(timeInterval);
     localStorage.setItem("finalTime", timeStart);
+    window.location.replace("highscore.html");
   }
 });
 
@@ -150,6 +152,7 @@ choiceContent3.addEventListener("click", function () {
   } else {
     clearInterval(timeInterval);
     localStorage.setItem("finalTime", timeStart);
+    window.location.replace("highscore.html");
   }
 });
 
@@ -165,6 +168,7 @@ choiceContent4.addEventListener("click", function () {
   } else if (index < questionsAll.length){
     clearInterval(timeInterval);
     localStorage.setItem("finalTime", timeStart);
+    window.location.replace("highscore.html");
     //key final time equal 
   } 
   
