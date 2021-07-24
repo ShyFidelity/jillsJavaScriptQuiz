@@ -7,7 +7,6 @@ var finalTime = localStorage.getItem("finalTime") || 0;
 var form = document.getElementById("form")
 console.log(form)
 
-}
 function displayHS() {
     finalScore.innerHTML = ""
     for (let i = 0; i < nameStored.length; i++) {
