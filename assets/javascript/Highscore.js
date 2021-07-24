@@ -2,12 +2,15 @@
 const nameInput = document.querySelector("#namePh");
 const displayNameSpan = document.querySelector("#userName")
 const finalScore = document.querySelector("#highscores")
-
-//stored in global so it can be called again 
-showName()
+var nameStored = JSON.parse(localStorage.getItem("scores"))|| [];
+var finalTime = localStorage.getItem("finalTime") || 0;
+var form = document.getElementById("form")
+console.log(form)
 
 function showName() {
-    var nameStored = localStorage.getItem("namePh");
+    var tempArray = []
+   
+
 
     if (!nameStored) {
         return;
@@ -16,21 +19,35 @@ function showName() {
     displayNameSpan.textContent = nameStored;  
 
 }
-    
-
-nameHsInput.addEventListener('keypress', function(event) {
-    event.preventDefault();
-    var nameHsInput = document.querySelector('#userName').value;
-    if (event.key === 'Enter') {
-
-    localStorage.setItem("userName",nameHsInput);
-
-    showName()
+function displayHS() {
+    finalScore.innerHTML = ""
+    for (let i = 0; i < nameStored.length; i++) {
+    const nameHs = nameStored[i];
+    const pEl = document.createElement("p")
+    const spanEl = document.createElement("span")
+    spanEl.textContent = "intials " + nameHs.intials + " score " + nameHs.highsScore
+    pEl.append(spanEl)
+    finalScore.append(pEl)
     }
-});
+}    
+
+displayHS()
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var nameHsInput = document.querySelector('#namePh').value;
+    console.log("nameHsInput " + nameHsInput)
+        var tempObject = {
+            intials: nameHsInput, 
+            highsScore: finalTime
+        }
+
+        nameStored.push(tempObject)
+        localStorage.setItem("scores",JSON.stringify(nameStored));
+        document.querySelector('#namePh').value = "";
+    displayHS()
+    }
+);
 
 
 //couldn't quite get this page to work..
 //I referenced several videos and the activities from last week but had no luck 
-var finalTime = localStorage.getItem("finalTime", finalTime);
-finalTime.textContent = finalTime;

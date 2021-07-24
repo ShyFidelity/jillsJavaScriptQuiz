@@ -7,7 +7,7 @@ let choiceContent1 = document.querySelector("#choice1");
 let choiceContent2 = document.querySelector("#choice2");
 let choiceContent3 = document.querySelector("#choice3");
 let choiceContent4 = document.querySelector("#choice4");
-let timeStart = 60;
+let timeStart = 75;
 
 //global var allows ++
 var index = 0;
@@ -111,12 +111,14 @@ choiceContent1.addEventListener("click", function () {
   } else if (questionsAll[index].correctAnswer !== choiceContent1.value) {
     timeStart = timeStart - 10;
     index++;
+    
   }
   //if not true this will not render
   if (index < questionsAll.length) {
     return getRandomQuestion();
   } else {
     clearInterval(timeInterval);
+    localStorage.setItem("finalTime", timeStart);
   }
 });
 choiceContent2.addEventListener("click", function () {
@@ -131,6 +133,7 @@ choiceContent2.addEventListener("click", function () {
     return getRandomQuestion();
   } else {
     clearInterval(timeInterval);
+    localStorage.setItem("finalTime", timeStart);
   }
 });
 
@@ -146,6 +149,7 @@ choiceContent3.addEventListener("click", function () {
     return getRandomQuestion();
   } else {
     clearInterval(timeInterval);
+    localStorage.setItem("finalTime", timeStart);
   }
 });
 
