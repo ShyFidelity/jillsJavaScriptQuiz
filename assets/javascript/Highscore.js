@@ -7,17 +7,6 @@ var finalTime = localStorage.getItem("finalTime") || 0;
 var form = document.getElementById("form")
 console.log(form)
 
-function showName() {
-    var tempArray = []
-   
-
-
-    if (!nameStored) {
-        return;
-      }
-        
-    displayNameSpan.textContent = nameStored;  
-
 }
 function displayHS() {
     finalScore.innerHTML = ""
