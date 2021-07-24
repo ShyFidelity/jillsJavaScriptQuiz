@@ -48,6 +48,3 @@ form.addEventListener('submit', function(event) {
     }
 );
 
-
-//couldn't quite get this page to work..
-//I referenced several videos and the activities from last week but had no luck 
