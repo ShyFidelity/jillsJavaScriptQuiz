@@ -108,7 +108,7 @@ startBtn.addEventListener("click", function () {
 choiceContent1.addEventListener("click", function () {
   if (questionsAll[index].correctAnswer === choiceContent1.value) {
     index++;
-  } else if (questionsAll[index].correctAnswer !== choiceContent1.value) {
+  } else {
     timeStart = timeStart - 10;
     index++;
     
@@ -122,14 +122,18 @@ choiceContent1.addEventListener("click", function () {
     window.location.replace("highscore.html");
   }
 });
+
+
+
 choiceContent2.addEventListener("click", function () {
-  if (questionsAll[index].correctAnswer === choiceContent2.value) {
+  if (questionsAll[index].correctAnswer === choiceContent1.value) {
     index++;
-  } else if (questionsAll[index].correctAnswer !== choiceContent2.value) {
+  } else {
     timeStart = timeStart - 10;
     index++;
+    
   }
-  //if not true this will not render;
+  //if not true this will not render
   if (index < questionsAll.length) {
     return getRandomQuestion();
   } else {
@@ -139,14 +143,19 @@ choiceContent2.addEventListener("click", function () {
   }
 });
 
+
+
+
+
 choiceContent3.addEventListener("click", function () {
-  if (questionsAll[index].correctAnswer === choiceContent3.value) {
+  if (questionsAll[index].correctAnswer === choiceContent1.value) {
     index++;
-  } else if (questionsAll[index].correctAnswer !== choiceContent3.value) {
+  } else {
     timeStart = timeStart - 10;
     index++;
+    
   }
-  //if not true this will not render;
+  //if not true this will not render
   if (index < questionsAll.length) {
     return getRandomQuestion();
   } else {
@@ -157,21 +166,19 @@ choiceContent3.addEventListener("click", function () {
 });
 
 choiceContent4.addEventListener("click", function () {
-  if (questionsAll[index].correctAnswer === choiceContent4.value) {
-    clearInterval(timeInterval);
-  } else if (questionsAll[index].correctAnswer !== choiceContent4.value) {
+  if (questionsAll[index].correctAnswer === choiceContent1.value) {
+    index++;
+  } else {
     timeStart = timeStart - 10;
+    index++;
+    
   }
-  //if not true this will not render;
+  //if not true this will not render
   if (index < questionsAll.length) {
     return getRandomQuestion();
-  } else if (index < questionsAll.length){
+  } else {
     clearInterval(timeInterval);
     localStorage.setItem("finalTime", timeStart);
     window.location.replace("highscore.html");
-    //key final time equal 
-  } 
-  
-  //
-  //want to go to the high score page and store countDown var 
+  }
 });
